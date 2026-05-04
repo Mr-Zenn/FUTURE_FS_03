@@ -6,12 +6,7 @@ require("dotenv").config();
 const app = express();
 
 // CORS (production + local)
-app.use(cors({
-  origin: (origin, callback) => {
-    callback(null, true);
-  }
-}));
-
+app.use(cors());
 app.use(express.json());
 
 // Routes
