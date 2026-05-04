@@ -7,7 +7,9 @@ const app = express();
 
 // CORS (production + local)
 app.use(cors({
-  origin: true
+  origin: (origin, callback) => {
+    callback(null, true);
+  }
 }));
 
 app.use(express.json());
