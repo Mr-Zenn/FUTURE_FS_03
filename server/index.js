@@ -7,7 +7,10 @@ const app = express();
 
 // CORS (production + local)
 app.use(cors({
-  origin: process.env.CLIENT_URL
+  origin: [
+    "https://future-fs-03-sandy.vercel.app",
+    "https://future-fs-03-rjmcbzssp-mr-zenns-projects.vercel.app"
+  ]
 }));
 
 app.use(express.json());
